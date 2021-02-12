@@ -36,6 +36,7 @@ int main(int argc, char **argv)
     std::cout << "Please enter the student's last name: ";
     std::cin.getline(student.l_name, 128);
     student.n_assignments = promptInt("Please enter how many assignments were graded: ", 1, 134217728);
+    std::cout << "\n";
 
     int numass = student.n_assignments;
     student.grades = new double[numass];
@@ -57,6 +58,7 @@ int main(int argc, char **argv)
     calculateStudentAverage(student.grades, &average);
     // Call `CalculateStudentAverage(???, ???)`
     // Output `average`
+    std::cout << "\n";
     std::cout << "Student: " << student.f_name << " " << student.l_name << " [" << student.id << "]" << std::endl;
     std::cout << "  Average grade: " << average << std::endl;
 }
